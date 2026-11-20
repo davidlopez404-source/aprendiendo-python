@@ -17,3 +17,13 @@ Cómo lo arreglé: quité el try/except un momento para ver el error real y corr
 Mensaje: ValueError: could not convert string to float: 'perfect'
 Causa: float() o int() reciben texto que no es número
 Cómo lo arreglé: envolví el input en try/except y mostré un mensaje claro
+
+## Error 5
+Mensaje: TypeError: can only concatenate str (not "int") to str
+Causa: intenté unir texto con un número usando + ('Ventas: ' + 500)
+Cómo lo arreglé: separé con coma en el print: print('Ventas:', 500)
+
+## Error 6
+Mensaje: ZeroDivisionError: division by zero
+Causa: dividí entre una variable que valía 0 (ventas / clientes con clientes = 0)
+Cómo lo arreglé: puse primero la condición guardiana: clientes > 0 and ventas / clientes > 100
